@@ -2,27 +2,26 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { FaFacebook, FaSkype, FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
     <div className="text-white " style={{ backgroundColor: "#d53078" }}>
       <div className="p-14 items-center">
         <div className=" flex items-center justify-between pb-5">
-          <div className="flex flex-row items-center ">
-            <div>
-              <img src={logo} alt="logo" className=" w-auto h-20 " />
-            </div>
-            <div className="ml-4 tracking-widest">
+          {/* <div className="flex flex-row items-center"> */}
+            <img src={logo} alt="logo" className=" w-auto h-20 " />
+            <div className=" tracking-widest relative block">
               <button className="text-lg mb-2" type="button">
-                <span>Sign up</span>
-              </button>{" "}
+                Sign up
+                <Underline className="w-16" />
+              </button>
               <span className="text-lg "> to our Newsletter</span>
-              <hr className="w-16 " />
-              <span className="text-xs tracking-wide  ">
+              <p className="text-xs tracking-wide  ">
                 Sign up for offers, exclusives, tips & tricks.
-              </span>
+              </p>
             </div>
-          </div>
+          {/* </div> */}
           <div>
             <input
               type="email"
@@ -102,13 +101,16 @@ const Footer = () => {
                 <FaFacebook size={20} className="hover:animate-bounce" />
               </button>
               <button type="button">
-                <FaInstagram size={20} />
+                <FaInstagram size={20} className="hover:animate-bounce" />
               </button>
               <button type="button">
-                <FaSkype size={20} />
+                <FaSkype size={20} className="hover:animate-bounce" />
               </button>
               <button type="button">
-                <AiFillTwitterCircle size={20} />
+                <AiFillTwitterCircle
+                  size={20}
+                  className="hover:animate-bounce"
+                />
               </button>
             </div>
           </div>
@@ -127,3 +129,14 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const Underline = styled.hr`
+  ::after {
+    content: "";
+    height: 4px;
+    background: #d53078;
+    position: absolute;
+    left: calc(40% - 10%);
+    bottom: 0;
+  }
+`;

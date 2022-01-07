@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="bg-white py-2 text-black px-8 flex items-center justify-evenly">
         <button>
           <a href="/">
-            <img src={logo} alt="logo" className="w-50 h-20 " />
+            <img src={logo} alt="logo" className="object-cover object-center w-50 h-20 " />
           </a>
         </button>
         <div className="border-2 flex flex-row items-center justify-center ">
