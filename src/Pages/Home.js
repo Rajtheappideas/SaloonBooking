@@ -1,16 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
-  Navbar,
-  Footer,
   HeroSection,
   HeroSection2,
   HeroSection3,
   HeroSection4,
   HeroSection5,
+  Navbar,
+  Footer,
 } from "../Components/index";
-const Homepage = () => {
+const Home = () => {
   return (
-    <div>
+    <Fragment>
       <Navbar />
       <HeroSection />
       <HeroSection2 />
@@ -18,8 +18,8 @@ const Homepage = () => {
       <HeroSection4 />
       <HeroSection5 />
       <Footer />
-    </div>
+    </Fragment>
   );
 };
 
-export default Homepage;
+export default Home;

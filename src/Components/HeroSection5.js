@@ -43,7 +43,7 @@ const HeroSection5 = () => {
           {data.map((item) => (
             <div className="hover:shadow-2xl" key={item.name}>
               <img src={item.img} alt={item.name} className="w-auto h-auto" />
-              <p className="text-center bg-gray-300 text-black text-base font-bold p-2">
+              <p className="text-center bg-gray-300 text-black text-base font-bold uppercase p-2">
                 {item.name}
               </p>
             </div>

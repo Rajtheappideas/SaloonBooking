@@ -62,6 +62,10 @@ const Navbar = () => {
           {/* </div> */}
         </button>
       </div>
+      <hr
+        className="border-t-4 border-pink-500"
+        style={{ color: "#d53078" }}
+      />
     </nav>
   );
 };

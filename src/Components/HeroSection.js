@@ -7,10 +7,6 @@ import styled from "styled-components";
 const HeroSection = () => {
   return (
     <div className="pt-3 ">
-      <hr
-        className="border-t-4 border-pink-500"
-        style={{ color: "#d53078" }}
-      />
       <div className="relative overflow-hidden">
         <img
           className="object-cover object-center w-full h-25% opacity-90"
@@ -18,7 +14,7 @@ const HeroSection = () => {
           alt="city"
         />
 
-        <CenterBox className=" text-white text-center leading-8 ">
+        <CenterBox className=" text-white text-center leading-8">
           <MoveToRight>
             <div className="tracking-tight text-2xl mb-5">
               Search & Book appointments with Perfect Professionals for you{" "}
