@@ -1,7 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Footer, Navbar } from "../Components";
 import logo from "../assets/contactus.jpg";
+import styled from "styled-components";
+import { FaUserAlt } from "react-icons/fa";
+import ReCAPTCHA from "react-google-recaptcha";
+import { MdEmail, MdMessage, MdPhone } from "react-icons/md";
 const ContactUs = () => {
+  const [isVerified, setIsverified] = useState(false);
+
+  const handleChange = (value) => {
+    console.log("recaptcha", value);
+    setIsverified(true);
+  };
   return (
     <Fragment>
       <Navbar />
@@ -16,149 +26,85 @@ const ContactUs = () => {
             <span>contact us</span>
           </p>
         </div>
-        <div className="p-16">
-          <div>
-            <p className="text-base">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
+        <div className="p-20">
+          <div className="text-center mb-8 ">
+            <div className="font-semibold tracking-wider relative inline-block uppercase text-2xl">
+              lets's get connnect
+              <Underline className="mt-4 " />
+            </div>
+            <p className="block my-4">
+              {" "}
+              Join us online and start building your business today.{" "}
             </p>
           </div>
-          <div className="py-8">
-            <span className="text-pink-600 text-xl font-semibold tracking-widest block">
-              Title
-            </span>
-            <p className="text-base py-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-            <p className="text-base py-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-            <p className="text-base pt-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-          </div>
-          <div className="py-8">
-            <span className="text-pink-600 text-xl font-semibold tracking-widest block">
-              Title
-            </span>
-            <p className="text-base py-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-            <p className="text-base pt-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-          </div>
-          <div className="py-8">
-            <span className="text-pink-600 text-xl font-semibold tracking-widest block">
-              Title
-            </span>
-            <p className="text-base py-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-            <p className="text-base py-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
-            <p className="text-base pt-4">
-              Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
-              ligula. Nulla quis lorem ut libero malesuada feugiat. Proin eget
-              tortor risus. Curabitur aliquet quam id dui posuere blandit.
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-              Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Quisque velit nisi,
-              pretium ut lacinia in, elementum id enim. Cras ultricies ligula
-              sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in,
-              elementum id enim.
-            </p>
+          <div className="flex items-center  justify-center">
+            <div className="shadow-2xl rounded-lg w-auto h-auto">
+              <div className="p-10 flex flex-col items-center justify-start ">
+                <div className="relative my-3">
+                  <input
+                    type="text"
+                    placeholder="Name*"
+                    className="opacity-50 bg-gray-300 outline-none py-2 pl-10 rounded-lg lg:w-96 md:w-72 w-auto"
+                  />
+                  <FaUserAlt
+                    size={25}
+                    className="absolute text-gray-300
+                     top-2 left-0 p-1 ml-2"
+                  />
+                </div>
+                <div className="relative mb-3">
+                  <input
+                    type="text"
+                    placeholder="Email*"
+                    className="opacity-50 bg-gray-300 outline-none py-2 pl-10 rounded-lg lg:w-96 md:w-72 w-auto"
+                  />
+                  <MdEmail
+                    size={25}
+                    className="absolute text-gray-300
+                     top-2 left-0 p-1 ml-2"
+                  />
+                </div>
+                <div className="relative mb-3">
+                  <input
+                    type="number"
+                    placeholder="Phone*"
+                    className="opacity-50 bg-gray-300 outline-none py-2 pl-10 rounded-lg lg:w-96 md:w-72 w-auto"
+                  />
+                  <MdPhone
+                    size={25}
+                    className="absolute text-gray-300
+                     top-2 left-0 p-1 ml-2"
+                  />
+                </div>
+                <div className="relative mb-3">
+                  <textarea
+                    type="text"
+                    placeholder="Enter your message*"
+                    cols="auto"
+                    rows="5"
+                    className="opacity-50 bg-gray-300 outline-none py-2 pl-10 rounded-lg lg:w-96 md:w-72 w-auto"
+                  />
+                  <MdMessage
+                    size={25}
+                    className="absolute text-gray-300
+                     top-2 left-0 p-1 ml-2"
+                  />
+                </div>
+                <div className="mb-3">
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                    onChange={handleChange}
+                  />
+                  <button
+                    disabled={!isVerified}
+                    type="button"
+                    className="bg-black mt-3 text-white uppercase font-semibold text-base p-2 w-full"
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -168,3 +114,15 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+const Underline = styled.p`
+  ::after {
+    content: "";
+    height: 4px;
+    width: 20%;
+    background: #d53078;
+    position: absolute;
+    left: calc(45% - 10%);
+    bottom: 0;
+  }
+`;

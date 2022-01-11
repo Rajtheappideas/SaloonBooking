@@ -3,15 +3,17 @@ import logo from "../assets/logo.png";
 import { FaFacebook, FaSkype, FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import styled from "styled-components";
-import { TermsAndCondition } from "../Pages";
 import { Link } from "react-router-dom";
 const Footer = () => {
+  const scrollToTop = () => window({ scroll: 0, behaviour: "smooth" });
   return (
     <div className="text-white " style={{ backgroundColor: "#d53078" }}>
       <div className="p-14 items-center">
         <div className=" flex items-center justify-between pb-5">
           {/* <div className="flex flex-row items-center"> */}
-          <img src={logo} alt="logo" className=" w-auto h-20 " />
+          <a href="/">
+            <img src={logo} alt="logo" className=" w-auto h-20 " />
+          </a>
           <div className=" tracking-widest relative block">
             <button className="text-lg mb-2" type="button">
               Sign up
@@ -44,22 +46,40 @@ const Footer = () => {
             <h3 className="font-semibold text-lg pb-2">Support</h3>
             <ul>
               <li className="text-base mb-2">
-                <Link to="/contactus" className="hover:underline">
+                {/* <a href="/contactus"> */}
+                <Link
+                  to="/contactus"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   Customer Support
                 </Link>{" "}
+                {/* </a> */}
               </li>
               <li className="text-base mb-2">
-                <Link to="/privacypolicy" className="hover:underline">
+                <Link
+                  onClick={() => scrollToTop()}
+                  to="/privacypolicy"
+                  className="hover:underline"
+                >
                   Privacy Policy
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                  <Link to="terms&condition" className="hover:underline">
-                    Terms And Conditions
-                  </Link>{" "}
+                <Link
+                  to="/terms&conditions"
+                  onClick={() => scrollToTop()}
+                  className="hover:underline"
+                >
+                  Terms And Conditions
+                </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link to="/" className="hover:underline">
+                <Link
+                  to="/"
+                  onClick={() => scrollToTop()}
+                  className="hover:underline"
+                >
                   Cookie Policy
                 </Link>{" "}
               </li>
@@ -69,12 +89,20 @@ const Footer = () => {
             <h3 className="font-semibold text-lg pb-2">About Us</h3>
             <ul>
               <li className="text-base mb-2">
-                <Link to="/aboutus" className="hover:underline">
+                <Link
+                  to="/aboutus"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   About Us
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link to="/" className="hover:underline">
+                <Link
+                  to="//"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   How It Works
                 </Link>{" "}
               </li>
@@ -84,17 +112,29 @@ const Footer = () => {
             <h3 className="font-semibold text-lg  pb-2">My Account</h3>
             <ul>
               <li className="text-base mb-2">
-                <Link to="/login" className="hover:underline">
+                <Link
+                  to="/login"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   Log In
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link to="/myaccount" className="hover:underline">
+                <Link
+                  to="/myaccount"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   My Account
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link to="/faq" className="hover:underline">
+                <Link
+                  to="/faq"
+                  className="hover:underline"
+                  onClick={() => scrollToTop()}
+                >
                   FAQ
                 </Link>{" "}
               </li>
@@ -103,7 +143,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg pb-2">Follow Us On</h3>
             <div className="flex flex-row justify-between">
-              <button type="button">
+                <button type="button">
                 <FaFacebook size={25} className="hover:animate-bounce" />
               </button>
               <button type="button">

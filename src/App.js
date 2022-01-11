@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./Components/ScrollToTop";
 import {
   Home,
   TermsAndCondition,
@@ -10,16 +11,19 @@ import {
 } from "./Pages/index";
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/terms&condition" element={<TermsAndCondition />} />
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-    </BrowserRouter>
+    <Fragment>
+      <ScrollToTop />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/terms&conditions" element={<TermsAndCondition />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
+    </Fragment>
   );
 };
 
