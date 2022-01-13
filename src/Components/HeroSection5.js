@@ -5,6 +5,7 @@ import img2 from "../assets/newyork.jpg";
 import img3 from "../assets/losangeles.jpg";
 import img4 from "../assets/dubai.jpg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import LazyLoad from "react-lazyload";
 
 const data = [
   {
@@ -42,7 +43,9 @@ const HeroSection5 = () => {
         <div className="w-full grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-center ">
           {data.map((item) => (
             <div className="hover:shadow-2xl" key={item.name}>
-              <img src={item.img} alt={item.name} className="w-auto h-auto" />
+              <LazyLoad>
+                <img src={item.img} alt={item.name} className="w-auto h-auto" />
+              </LazyLoad>
               <p className="text-center bg-gray-300 text-black text-base font-bold uppercase p-2">
                 {item.name}
               </p>

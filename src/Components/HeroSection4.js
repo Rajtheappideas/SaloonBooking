@@ -5,6 +5,7 @@ import img2 from "../assets/blush&blow.jpg";
 import img3 from "../assets/universal hair.jpg";
 import img4 from "../assets/spa.jpg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import LazyLoad from "react-lazyload";
 
 const data = [
   {
@@ -43,7 +44,9 @@ const HeroSection4 = () => {
         <div className="grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-center">
           {data.map((item) => (
             <div key={item.name}>
-              <img src={item.img} alt="pic" className="w-full h-auto" />
+              <LazyLoad>
+                <img src={item.img} alt="pic" className="w-full h-auto" />
+              </LazyLoad>
               <p className="text-center p-3 text-base font-bold bg-gray-300  text-black">
                 {item.name}
               </p>

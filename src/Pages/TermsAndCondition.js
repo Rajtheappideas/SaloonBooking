@@ -1,17 +1,21 @@
 import React, { Fragment } from "react";
 import logo from "../assets/terms&condition.jpg";
 import { Footer, Navbar } from "../Components";
+import LazyLoad from "react-lazyload";
+
 const TermsAndCondition = () => {
   return (
     <Fragment>
       <Navbar />
       <main>
         <div className="relative">
-          <img
-            src={logo}
-            alt="terms&confitionpic"
-            className="w-full bg-auto lg:h-80 md:h-60 sm:h-40  object-cover object-bottom "
-          />
+          <LazyLoad once>
+            <img
+              src={logo}
+              alt="terms&confitionpic"
+              className="w-full bg-auto lg:h-80 md:h-60 sm:h-40  object-cover object-bottom "
+            />
+          </LazyLoad>
           <p className="uppercase text-white text-4xl  font-extrabold absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4  ">
             <span>Terms & conditions</span>
           </p>

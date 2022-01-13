@@ -6,6 +6,7 @@ import img4 from "../assets/beauty salon.jpg";
 import img5 from "../assets/makeupstudio.jpg";
 import img6 from "../assets/Therapies.jpg";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const PickYourPro = [
   {
@@ -53,11 +54,13 @@ const HeroSection2 = () => {
           >
             <div className="p-2">
               <div>
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-auto object-cover object-center h-auto"
-                />
+                <LazyLoad>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-auto object-cover object-center h-auto"
+                  />
+                </LazyLoad>
               </div>
               <p className="text-base bg-pink-600 w-100% overflow-hidden p-3 text-center text-white  ">
                 {item.name}

@@ -1,34 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { Sidebar } from "./index";
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="text-thin">
       <div className="w-full h-10 bg-black text-white flex justify-end items-center p-2">
-        <button type="button" className="pr-4 outline-none">
-          SIGN IN
+        <button type="button" className="pr-4 outline-none border-r-2">
+          <Link to="/signin">SIGN IN</Link>
         </button>{" "}
-        | <button className="pl-4 pr-10 outline-none">SIGN UP</button>
-      </div>
-      <div className="bg-white py-2 text-black px-8 flex items-center justify-evenly">
-        <button>
-          <a href="/">
-            <img src={logo} alt="logo" className="object-cover object-center w-50 h-20 " />
-          </a>
+        <button className="pl-4 pr-10 outline-none">
+          <Link to="/signup">SIGN UP</Link>
         </button>
-        <div className="border-2 flex flex-row items-center justify-center ">
+      </div>
+      <div className="bg-white py-2 text-black px-8 flex flex-col lg:flex-row md:flex-col items-center justify-evenly">
+        <button>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="logo"
+              className="object-cover object-center w-50 h-20 my-3"
+            />
+          </Link>
+        </button>
+        <div className="border-2 hidden lg:flex md:flex items-center justify-center mb-3 lg:mb-0">
           <FaSearch size={20} color="grey" className="opacity-40 mx-2" />
           <input
             type="text"
             placeholder="Enter a search term"
-            className="outline-none"
+            className="outline-none border-r-2"
           />{" "}
-          <div className="mx-auto">
-            <span className=" opacity-40 border-r  border-gray-500"></span>
-          </div>
           <MdOutlineLocationOn
             size={20}
             color="grey"
@@ -46,26 +52,28 @@ const Navbar = () => {
             SEARCH
           </button>
         </div>
-        <div>
+        <div className="mb-3 lg:mb-0">
           <button
-            className="p-2 text-white outline-none w-56"
+            className="p-2 text-white outline-none lg:w-56 w-48"
             type="button"
             style={{ backgroundColor: "#d53078" }}
           >
             ADD YOUR BUSINESS
           </button>
         </div>
-        <button type="button" className="font-thin flex flex-row items-center">
-          {/* <div className="flex flex-row items-center"> */}
-          MENU
-          <GiHamburgerMenu size={20} className="ml-1" />
-          {/* </div> */}
-        </button>
+        <div className="flex">
+          <button className="uppercase text-base mr-3">menu</button>
+          <button
+            type="button"
+            onClick={() => setIsOpen(true)}
+            className="items-center"
+          >
+            <GiHamburgerMenu size={30} />
+          </button>
+        </div>
+        <Sidebar open={isOpen} close={() => setIsOpen(false)}></Sidebar>
       </div>
-      <hr
-        className="border-t-4 border-pink-500"
-        style={{ color: "#d53078" }}
-      />
+      <hr className="border-t-4 border-pink-500" style={{ color: "#d53078" }} />
     </nav>
   );
 };

@@ -3,47 +3,55 @@ import { FaSearch } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import logo from "../assets/herologo.jpg";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const HeroSection = () => {
   return (
     <div className="pt-3 ">
       <div className="relative overflow-hidden">
-        <img
-          className="object-cover object-center w-full h-25% opacity-90"
-          src={logo}
-          alt="city"
-        />
+        <LazyLoad>
+          <img
+            className="object-cover object-center w-full h-25% opacity-90"
+            src={logo}
+            alt="city"
+          />
+        </LazyLoad>
 
         <CenterBox className=" text-white text-center leading-8">
           <MoveToRight>
-            <div className="tracking-tight text-2xl mb-5">
+            <div className="tracking-tight sm:text-2xl text-xl  mb-5">
               Search & Book appointments with Perfect Professionals for you{" "}
             </div>
           </MoveToRight>
-          <MoveToLeft className="flex flex-row bg-white w-full items-center justify-between outline-none">
-            <FaSearch size={20} color="gray" className="mx-2" />
-            <input
-              type="text"
-              className="outline-none text-black"
-              placeholder="Enter a search Term"
-            />
-            <div>
-              <span className=" opacity-40 border-r border-gray-500"></span>
+          <MoveToLeft className="flex sm:flex-row flex-col sm:bg-white lg:w-full md:w-full w-auto items-center justify-between outline-none">
+            <div className="flex flex-row sm:mb-0 mb-2 relative ">
+              <input
+                type="text"
+                className="outline-none text-black sm:border-r-2 pl-8"
+                placeholder="Enter a search Term"
+              />
+              <FaSearch
+                size={20}
+                color="gray"
+                className="absolute top-1.5 left-1"
+              />
             </div>
-            <MdOutlineLocationOn
-              size={20}
-              color="gray"
-              className="mx-2 animate-bounce"
-            />
-            <input
-              type="text"
-              className="outline-none text-black"
-              placeholder="UK, town or postcode"
-            />
+            <div className="flex flex-row sm:mb-0 mb-2 relative">
+              <input
+                type="text"
+                className="outline-none text-black pl-8"
+                placeholder="UK, town or postcode"
+              />
+              <MdOutlineLocationOn
+                size={20}
+                color="gray"
+                className=" absolute top-1.5 left-1 animate-bounce"
+              />
+            </div>
             <div>
               <button
                 type="button"
-                className="p-1 text-white w-32 outline-none"
+                className="p-1 text-white sm:w-36 w-56 outline-none"
                 style={{ backgroundColor: "#d53078" }}
               >
                 SEARCH

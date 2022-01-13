@@ -5,16 +5,15 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const Footer = () => {
-  const scrollToTop = () => window({ scroll: 0, behaviour: "smooth" });
+  const scrollToTop = () => window({ scroll: 0, behaviour: "auto" });
   return (
     <div className="text-white " style={{ backgroundColor: "#d53078" }}>
-      <div className="p-14 items-center">
-        <div className=" flex items-center justify-between pb-5">
-          {/* <div className="flex flex-row items-center"> */}
-          <a href="/">
-            <img src={logo} alt="logo" className=" w-auto h-20 " />
-          </a>
-          <div className=" tracking-widest relative block">
+      <div className="p-14">
+        <div className=" flex flex-col justify-center lg:flex-row text-center items-center lg:justify-between pb-5">
+          <Link to="/">
+            <img src={logo} alt="logo" className=" w-auto lg:h-20 h-36  mb-2" />
+          </Link>
+          <div className=" tracking-widest relative my-3">
             <button className="text-lg mb-2" type="button">
               Sign up
               <Underline className="w-16" />
@@ -24,43 +23,48 @@ const Footer = () => {
               Sign up for offers, exclusives, tips & tricks.
             </p>
           </div>
-          {/* </div> */}
-          <div>
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="outline-none p-2 rounded w-72 text-black opactiy-20"
-              onChange={(e) => e.target.value}
-            />
-            <button
-              type="submit"
-              className="bg-black text-white p-2 w-48 outline-none rounded ml-3"
-            >
-              Submit
-            </button>
+          <div className="flex flex-row items-center mt-2">
+            <form>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="outline-none p-2 rounded w-72 text-black opactiy-20"
+                onChange={(e) => e.target.value}
+              />
+              <button
+                type="submit"
+                className="mt-2 bg-black text-white p-2 sm:w-48 w-7/12 outline-none rounded ml-3"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
         <hr className="p-3 opacity-40" style={{ color: "#ebebeb" }} />
-        <section className="flex justify-between ">
-          <div>
-            <h3 className="font-semibold text-lg pb-2">Support</h3>
+
+        {/* --------------------second div---------------------- */}
+        <section
+          className="grid grid-cols-1 text-center sm:text-left
+         sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4"
+        >
+          {/* ---------------------suport------------------------ */}
+          <div className="lg:text-left md:text-left mb-3">
+            <h3 className="font-bold  text-xl pb-2">Support</h3>
             <ul>
               <li className="text-base mb-2">
-                {/* <a href="/contactus"> */}
                 <Link
                   to="/contactus"
                   className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  onClick={scrollToTop}
                 >
                   Customer Support
                 </Link>{" "}
-                {/* </a> */}
               </li>
               <li className="text-base mb-2">
                 <Link
-                  onClick={() => scrollToTop()}
+                  onClick={scrollToTop}
                   to="/privacypolicy"
-                  className="hover:underline"
+                  className="hover:underline "
                 >
                   Privacy Policy
                 </Link>{" "}
@@ -68,54 +72,50 @@ const Footer = () => {
               <li className="text-base mb-2">
                 <Link
                   to="/terms&conditions"
-                  onClick={() => scrollToTop()}
+                  onClick={scrollToTop}
                   className="hover:underline"
                 >
-                  Terms And Conditions
+                  Terms & Conditions
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link
-                  to="/"
-                  onClick={() => scrollToTop()}
-                  className="hover:underline"
-                >
+                <Link to="/" onClick={scrollToTop} className="hover:underline">
                   Cookie Policy
                 </Link>{" "}
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold text-lg pb-2">About Us</h3>
+
+          {/* --------------------about us--------------------- */}
+          <div className="lg:text-left md:text-left mb-3">
+            <h3 className="font-bold text-xl pb-2">About Us</h3>
             <ul>
               <li className="text-base mb-2">
                 <Link
                   to="/aboutus"
-                  className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  className="hover:underline "
+                  onClick={scrollToTop}
                 >
                   About Us
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link
-                  to="//"
-                  className="hover:underline"
-                  onClick={() => scrollToTop()}
-                >
+                <Link to="/" className="hover:underline" onClick={scrollToTop}>
                   How It Works
                 </Link>{" "}
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold text-lg  pb-2">My Account</h3>
+
+          {/* -----------myaccount---------------- */}
+          <div className=" lg:text-left md:text-left mb-3">
+            <h3 className="font-bold  text-xl  pb-2">My Account</h3>
             <ul>
               <li className="text-base mb-2">
                 <Link
                   to="/login"
                   className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  onClick={scrollToTop}
                 >
                   Log In
                 </Link>{" "}
@@ -123,8 +123,8 @@ const Footer = () => {
               <li className="text-base mb-2">
                 <Link
                   to="/myaccount"
-                  className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  className="hover:underline "
+                  onClick={scrollToTop}
                 >
                   My Account
                 </Link>{" "}
@@ -132,36 +132,36 @@ const Footer = () => {
               <li className="text-base mb-2">
                 <Link
                   to="/faq"
-                  className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  className="hover:underline "
+                  onClick={scrollToTop}
                 >
                   FAQ
                 </Link>{" "}
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold text-lg pb-2">Follow Us On</h3>
-            <div className="flex flex-row justify-between">
-                <button type="button">
-                <FaFacebook size={25} className="hover:animate-bounce" />
+
+          {/* --------------------follow us=----------------------   */}
+          <div className="lg:text-left md:text-left mb-3">
+            <h3 className="font-bold text-xl pb-2">Follow Us On</h3>
+            <div className="justify-center flex flex-row items-center lg:justify-start md:justify-start sm:justify-start">
+              <button type="button">
+                <FaFacebook size={25} className="hover:animate-bounce " />
               </button>
               <button type="button">
-                <FaInstagram size={25} className="hover:animate-bounce" />
+                <FaInstagram size={25} className="hover:animate-bounce ml-2" />
               </button>
               <button type="button">
-                <FaSkype size={25} className="hover:animate-bounce" />
+                <FaSkype size={25} className="hover:animate-bounce ml-2" />
               </button>
               <button type="button">
                 <AiFillTwitterCircle
                   size={25}
-                  className="hover:animate-bounce"
+                  className="hover:animate-bounce ml-2"
                 />
               </button>
             </div>
           </div>
-
-          <div></div>
         </section>
       </div>
       <div
