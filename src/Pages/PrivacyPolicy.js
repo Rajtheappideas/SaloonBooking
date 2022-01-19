@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
-import { Footer, Navbar } from "../Components";
 import logo from "../assets/terms&condition.jpg";
 import LazyLoad from "react-lazyload";
+import { Footer, Navbar } from "../Components";
+import { MetaTags } from "react-meta-tags";
 
 const PrivacyPolicy = () => {
   return (
     <Fragment>
+      <MetaTags>
+        <title>Privacy policy</title>
+      </MetaTags>
       <Navbar />
       <main>
         <div className="relative">

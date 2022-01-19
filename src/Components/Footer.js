@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/1.png";
 import { FaFacebook, FaSkype, FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const Footer = () => {
-  const scrollToTop = () => window.scrollTo({ scroll: 0, behaviour: "smooth" });
+  const scrollToTop = () => window.scrollTo({ scroll: 0, behaviour: "auto" });
   return (
     <div className="text-white " style={{ backgroundColor: "#d53078" }}>
       <div className="p-14">
@@ -15,7 +15,7 @@ const Footer = () => {
           </Link>
           <div className=" tracking-widest relative my-3">
             <button className="text-lg mb-2" type="button">
-              Sign up
+              <Link to="/signup">Sign up</Link>
               <Underline className="w-16" />
             </button>
             <span className="text-lg "> to our Newsletter</span>
@@ -33,9 +33,9 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="mt-2 bg-black text-white p-2 sm:w-48 w-7/12 outline-none rounded ml-3"
+                className="mt-2 bg-black uppercase text-white p-2 sm:w-48 w-7/12 outline-none rounded ml-3"
               >
-                Submit
+                subscribe
               </button>
             </form>
           </div>
@@ -113,7 +113,7 @@ const Footer = () => {
             <ul>
               <li className="text-base mb-2">
                 <Link
-                  to="/login"
+                  to="/signin"
                   className="hover:underline"
                   onClick={scrollToTop}
                 >
@@ -146,19 +146,46 @@ const Footer = () => {
             <h3 className="font-bold text-xl pb-2">Follow Us On</h3>
             <div className="justify-center flex flex-row items-center lg:justify-start md:justify-start sm:justify-start">
               <button type="button">
-                <FaFacebook size={25} className="hover:animate-bounce " />
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaFacebook size={25} className="hover:animate-bounce " />
+                </a>
               </button>
               <button type="button">
-                <FaInstagram size={25} className="hover:animate-bounce ml-2" />
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaInstagram
+                    size={25}
+                    className="hover:animate-bounce ml-2"
+                  />
+                </a>
               </button>
               <button type="button">
-                <FaSkype size={25} className="hover:animate-bounce ml-2" />
+                <a
+                  href="https://www.skype.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaSkype size={25} className="hover:animate-bounce ml-2" />
+                </a>
               </button>
               <button type="button">
-                <AiFillTwitterCircle
-                  size={25}
-                  className="hover:animate-bounce ml-2"
-                />
+                <a
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillTwitterCircle
+                    size={25}
+                    className="hover:animate-bounce ml-2"
+                  />
+                </a>
               </button>
             </div>
           </div>

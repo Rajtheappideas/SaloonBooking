@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import img1 from "../assets/hair&beauty.jpg";
 import img2 from "../assets/blush&blow.jpg";
@@ -6,6 +6,12 @@ import img3 from "../assets/universal hair.jpg";
 import img4 from "../assets/spa.jpg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import LazyLoad from "react-lazyload";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+
+SwiperCore.use([Navigation]);
 
 const data = [
   {
@@ -13,7 +19,7 @@ const data = [
     name: "Jawed Hair & Beauty",
   },
   {
-    img: img1,
+    img: img2,
     name: "Blush & Blow",
   },
   {
@@ -24,6 +30,26 @@ const data = [
     img: img4,
     name: "Nevya spa",
   },
+  {
+    img: img2,
+    name: "universal Hair & Beauty",
+  },
+  {
+    img: img4,
+    name: "Nevya spa",
+  },
+  {
+    img: img3,
+    name: "universal Hair & Beauty",
+  },
+  {
+    img: img4,
+    name: "Nevya spa",
+  },
+  {
+    img: img1,
+    name: "Jawed Hair & Beauty",
+  },
 ];
 const HeroSection4 = () => {
   return (
@@ -31,34 +57,67 @@ const HeroSection4 = () => {
       <div className="text-center mb-8 ">
         <div className="font-semibold tracking-wider relative inline-block uppercase text-2xl">
           our popular pro
-          <Underline className="mt-4 " />
+          <Underline className="mt-4" />
         </div>
       </div>
+      {/* <div className="flex justify-center items-center text-center h-52 w-full  p-40">
+        <Swiper
+          spaceBetween={30}
+          freeMode={true}
+          slidesPerView={4}
+          navigation={true}
+          pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+        >
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>
+              <img src={item.img} alt={item.name} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div> */}
 
-      <div className="flex mx-auto">
-        <div className="flex items-center justify-start">
-          <button className=" hover:animate-pulse mx-2">
+      {/* <div className="flex mx-auto"> */}
+      {/* <div className="flex items-center justify-start">
+          <button className="hover:animate-pulse mx-2 " onClick={prevImage}>
             <FaChevronCircleLeft size={30} />
           </button>
-        </div>
-        <div className="grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-center">
+        </div> */}
+
+      {/* <div className="grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-center text-center w-full h-40"> */}
+      <div className="flex justify-center items-center text-center w-full p-16">
+        <Swiper
+          spaceBetween={10}
+          // freeMode={true}
+          slidesPerView={3}
+          // centeredSlides={true}
+          autoplay={true}
+          navigation={true}
+          // pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+        >
           {data.map((item) => (
-            <div key={item.name}>
-              <LazyLoad>
-                <img src={item.img} alt="pic" className="w-full h-auto" />
-              </LazyLoad>
-              <p className="text-center p-3 text-base font-bold bg-gray-300  text-black">
-                {item.name}
-              </p>
-            </div>
+            <SwiperSlide key={item.name} className="w-full">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="object-cover w-full h-48"
+              />
+              <p className="w-full bg-gray-300 p-1">{item.name}</p>
+            </SwiperSlide>
           ))}
-        </div>
-        <div className="flex items-center justify-end">
-          <button className="hover:animate-pulse mx-2">
+        </Swiper>
+      </div>
+      {/* <div className="flex items-center justify-end">
+          <button className="hover:animate-pulse mx-2" onClick={nextImage}>
             <FaChevronCircleRight size={30} />
           </button>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };

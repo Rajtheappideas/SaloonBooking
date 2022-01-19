@@ -7,10 +7,14 @@ import img2 from "../assets/price.jpg";
 import img1 from "../assets/quality&choice.jpg";
 import img3 from "../assets/convenience.jpg";
 import LazyLoad from "react-lazyload";
+import { MetaTags } from "react-meta-tags";
 
 const AboutUs = () => {
   return (
     <Fragment>
+      <MetaTags>
+        <title>About us</title>
+      </MetaTags>
       <Navbar />
       <main>
         <div className="relative">

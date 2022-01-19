@@ -6,7 +6,10 @@ import img3 from "../assets/losangeles.jpg";
 import img4 from "../assets/dubai.jpg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import LazyLoad from "react-lazyload";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 const data = [
   {
     img: img1,
@@ -24,6 +27,22 @@ const data = [
     img: img4,
     name: "dubai",
   },
+  {
+    img: img3,
+    name: "los angeles",
+  },
+  {
+    img: img1,
+    name: "india",
+  },
+  {
+    img: img2,
+    name: "newyork",
+  },
+  {
+    img: img4,
+    name: "dubai",
+  },
 ];
 const HeroSection5 = () => {
   return (
@@ -35,28 +54,37 @@ const HeroSection5 = () => {
         </div>
       </div>
       <div className="flex mx-auto">
-        <div className="flex items-center justify-start">
+        {/* <div className="flex items-center justify-start">
           <button className=" hover:animate-pulse mx-2">
             <FaChevronCircleLeft size={30} />
           </button>
+        </div> */}
+         <div className="flex justify-center items-center text-center w-full p-16">
+          <Swiper
+            spaceBetween={10}
+            // freeMode={true}
+            slidesPerView={3}
+            // centeredSlides={true}
+            autoplay={true}
+            navigation={true}
+            // pagination={{ clickable: true }}
+            // scrollbar={{ draggable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+          >
+            {data.map((item) => (
+              <SwiperSlide key={item.id} className="w-full">
+                <img src={item.img} alt={item.name} className="object-cover w-auto h-40" />
+                <p className="w-full bg-gray-300 p-1">{item.name}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        <div className="w-full grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-center ">
-          {data.map((item) => (
-            <div className="hover:shadow-2xl" key={item.name}>
-              <LazyLoad>
-                <img src={item.img} alt={item.name} className="w-auto h-auto" />
-              </LazyLoad>
-              <p className="text-center bg-gray-300 text-black text-base font-bold uppercase p-2">
-                {item.name}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-start">
+        {/* <div className="flex items-center justify-start">
           <button className=" hover:animate-pulse mx-2">
             <FaChevronCircleRight size={30} />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import LazyLoad from "react-lazyload";
-import { Footer, Navbar } from "../Components";
 import logo from "../assets/terms&condition.jpg";
 import MyAccordian from "../Components/MyAccordian";
+import { Navbar, Footer } from "../Components/index";
+import { MetaTags } from "react-meta-tags";
 
 const data = [
   {
@@ -34,6 +35,9 @@ const data = [
 const Faq = () => {
   return (
     <Fragment>
+      <MetaTags>
+        <title>FAQ</title>
+      </MetaTags>
       <Navbar />
       <main>
         <div className="relative">

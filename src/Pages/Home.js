@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { MetaTags } from "react-meta-tags";
 import {
   HeroSection,
   HeroSection2,
@@ -11,6 +12,9 @@ import {
 const Home = () => {
   return (
     <Fragment>
+      <MetaTags>
+        <title>Home</title>
+      </MetaTags>
       <Navbar />
       <HeroSection />
       <HeroSection2 />

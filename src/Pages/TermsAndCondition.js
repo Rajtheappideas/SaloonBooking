@@ -2,11 +2,15 @@ import React, { Fragment } from "react";
 import logo from "../assets/terms&condition.jpg";
 import { Footer, Navbar } from "../Components";
 import LazyLoad from "react-lazyload";
+import { MetaTags } from "react-meta-tags";
 
 const TermsAndCondition = () => {
   return (
     <Fragment>
-      <Navbar />
+      <MetaTags>
+        <title>Terms & conditions</title>
+      </MetaTags>
+      <Navbar/>
       <main>
         <div className="relative">
           <LazyLoad once>
@@ -166,7 +170,7 @@ const TermsAndCondition = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer/>
     </Fragment>
   );
 };
