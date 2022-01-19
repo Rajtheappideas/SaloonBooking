@@ -5,7 +5,12 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const Footer = () => {
-  const scrollToTop = () => window.scrollTo({ scroll: 0, behaviour: "auto" });
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="text-white " style={{ backgroundColor: "#d53078" }}>
       <div className="p-14">
@@ -55,7 +60,7 @@ const Footer = () => {
                 <Link
                   to="/contactus"
                   className="hover:underline"
-                  onClick={() => scrollToTop()}
+                  onClick={scrollToTop}
                 >
                   Customer Support
                 </Link>{" "}

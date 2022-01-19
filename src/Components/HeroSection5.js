@@ -74,7 +74,7 @@ const HeroSection5 = () => {
           >
             {data.map((item) => (
               <SwiperSlide key={item.id} className="w-full">
-                <img src={item.img} alt={item.name} className="object-cover w-auto h-40" />
+                <img src={item.img} alt={item.name} className="object-cover w-full h-40" />
                 <p className="w-full bg-gray-300 p-1">{item.name}</p>
               </SwiperSlide>
             ))}
