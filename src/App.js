@@ -12,8 +12,9 @@ import {
   Signin,
   Signup,
   Resetpassword,
+  MyAccount
 } from "./Pages/index";
-import { Navbar, Footer } from "./Components/index";
+// import { Navbar, Footer } from "./Components/index";
 import { UserProvider } from "./context/user_context";
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/myaccount" element={<MyAccount />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
           {/* <Footer /> */}

@@ -37,7 +37,7 @@ const Footer = () => {
                 onChange={(e) => e.target.value}
               />
               <button
-                type="submit"
+                type="button"
                 className="mt-2 bg-black uppercase text-white p-2 sm:w-48 w-7/12 outline-none rounded ml-3"
               >
                 subscribe

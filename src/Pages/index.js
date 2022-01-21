@@ -7,4 +7,5 @@ export { default as PrivacyPolicy } from "./PrivacyPolicy";
 export { default as ContactUs } from "./ContactUs";
 export { default as AboutUs } from "./AboutUs";
 export { default as FAQ } from "./Faq";
+export { default as MyAccount } from "./MyAccount";
 export { default as Error404 } from "./Error404";

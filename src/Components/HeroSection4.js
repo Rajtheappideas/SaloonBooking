@@ -15,40 +15,54 @@ SwiperCore.use([Navigation]);
 
 const data = [
   {
+    id: 1,
     img: img1,
     name: "Jawed Hair & Beauty",
   },
   {
+    id: 2,
     img: img2,
     name: "Blush & Blow",
   },
   {
+    id: 3,
     img: img3,
     name: "universal Hair & Beauty",
   },
   {
+    id: 4,
     img: img4,
     name: "Nevya spa",
   },
   {
+    id: 5,
     img: img2,
     name: "universal Hair & Beauty",
   },
   {
+    id: 6,
     img: img4,
     name: "Nevya spa",
   },
   {
+    id: 7,
     img: img3,
     name: "universal Hair & Beauty",
   },
   {
+    id: 8,
     img: img4,
     name: "Nevya spa",
   },
   {
+    id: 9,
     img: img1,
     name: "Jawed Hair & Beauty",
+  },
+  {
+    id: 10,
+    img: img3,
+    name: "universal Hair & Beauty",
   },
 ];
 const HeroSection4 = () => {
@@ -101,11 +115,11 @@ const HeroSection4 = () => {
           // onSlideChange={() => console.log("slide change")}
         >
           {data.map((item) => (
-            <SwiperSlide key={item.name} className="w-full">
+            <SwiperSlide key={item.id} className="w-full">
               <img
                 src={item.img}
                 alt={item.name}
-                className="object-cover w-full h-48"
+                className="object-cover object-center w-full h-48"
               />
               <p className="w-full bg-gray-300 p-1">{item.name}</p>
             </SwiperSlide>

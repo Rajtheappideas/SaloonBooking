@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -11,21 +11,22 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { handleLogout } = useUserdata();
   const { userData } = useUserContext();
-  const userEmail = userData?.yu?.nv;
+  const userName = userData?.yu?.qf;
   return (
     <nav className="text-thin">
       <div
-        className={`w-full h-10 bg-black text-white flex ${
-          userData ? "justify-between" : "justify-end"
-        }  items-center p-2`}
+        className={`w-full h-10 bg-black text-white flex justify-end items-center p-2`}
       >
         {" "}
         {userData ? (
           <>
-            <p >You logged in as <span className="text-green-400">{userEmail}</span></p>
+            <p className="border-r pr-4 uppercase">
+              Hi,
+              <span className="ml-1">{userName}</span>
+            </p>
             <button
               type="button"
-              className="text-center px-2 outline-none tracking-wider bg-white text-black"
+              className="text-center px-4 outline-none tracking-wider"
               onClick={handleLogout}
             >
               Logout
@@ -48,7 +49,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              className="object-cover object-center w-50 h-20 my-3"
+              className="object-cover object-center w-full h-20 my-3"
             />
           </Link>
         </button>

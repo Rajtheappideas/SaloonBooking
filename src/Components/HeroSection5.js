@@ -12,34 +12,42 @@ import "swiper/css";
 import "swiper/css/navigation";
 const data = [
   {
+    id: 1,
     img: img1,
     name: "india",
   },
   {
+    id: 2,
     img: img2,
     name: "newyork",
   },
   {
+    id: 3,
     img: img3,
     name: "los angeles",
   },
   {
+    id: 4,
     img: img4,
     name: "dubai",
   },
   {
+    id: 5,
     img: img3,
     name: "los angeles",
   },
   {
+    id: 6,
     img: img1,
     name: "india",
   },
   {
+    id: 7,
     img: img2,
     name: "newyork",
   },
   {
+    id: 8,
     img: img4,
     name: "dubai",
   },
@@ -59,7 +67,7 @@ const HeroSection5 = () => {
             <FaChevronCircleLeft size={30} />
           </button>
         </div> */}
-         <div className="flex justify-center items-center text-center w-full p-16">
+        <div className="flex justify-center items-center text-center w-full p-16">
           <Swiper
             spaceBetween={10}
             // freeMode={true}
@@ -74,7 +82,11 @@ const HeroSection5 = () => {
           >
             {data.map((item) => (
               <SwiperSlide key={item.id} className="w-full">
-                <img src={item.img} alt={item.name} className="object-cover w-full h-40" />
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="object-cover object-center w-full h-40"
+                />
                 <p className="w-full bg-gray-300 p-1">{item.name}</p>
               </SwiperSlide>
             ))}
