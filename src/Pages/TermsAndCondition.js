@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import logo from "../assets/terms&condition.jpg";
+import logo from "../assets/terms_condition.jpg";
 import { Footer, Navbar } from "../Components";
 import LazyLoad from "react-lazyload";
 import { MetaTags } from "react-meta-tags";

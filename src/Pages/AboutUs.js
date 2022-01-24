@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { Footer, HeroSection3, Navbar } from "../Components";
-import logo from "../assets/terms&condition.jpg";
+import logo from "../assets/terms_condition.jpg";
 import styled from "styled-components";
 import pointer from "../assets/finger.png";
 import img2 from "../assets/price.jpg";
-import img1 from "../assets/quality&choice.jpg";
+import img1 from "../assets/quality_choice.jpg";
 import img3 from "../assets/convenience.jpg";
 import LazyLoad from "react-lazyload";
 import { MetaTags } from "react-meta-tags";

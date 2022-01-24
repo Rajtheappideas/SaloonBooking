@@ -12,15 +12,15 @@ import {
   Signin,
   Signup,
   Resetpassword,
-  MyAccount
+  MyAccount,
+  Bookings
 } from "./Pages/index";
-// import { Navbar, Footer } from "./Components/index";
 import { UserProvider } from "./context/user_context";
 const App = () => {
   return (
     <Fragment>
-      <ScrollToTop />
       <BrowserRouter>
+        <ScrollToTop />
         <UserProvider>
           {/* <Navbar /> */}
           <Routes>
@@ -34,6 +34,7 @@ const App = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/myaccount" element={<MyAccount />} />
+            <Route path="/bookings" element={<Bookings />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
           {/* <Footer /> */}

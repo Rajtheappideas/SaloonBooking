@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiTwotoneStar } from "react-icons/ai";
 import { MdVerifiedUser } from "react-icons/md";
-import barbershop from "../assets/barber-shop.jpg";
+import barbershop from "../assets/barber_shop.jpg";
 import barbershop1 from "../assets/blush&blow.jpg";
 
 const Favourites = () => {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import img1 from "../assets/hair&beauty.jpg";
+import img1 from "../assets/hair_beauty.jpg";
 import img2 from "../assets/blush&blow.jpg";
-import img3 from "../assets/universal hair.jpg";
+import img3 from "../assets/universal_hair.jpg";
 import img4 from "../assets/spa.jpg";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import LazyLoad from "react-lazyload";

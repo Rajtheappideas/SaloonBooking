@@ -1,10 +1,10 @@
 import React from "react";
-import img1 from "../assets/health and beauty.jpg";
+import img1 from "../assets/health_and_beauty.jpg";
 import img2 from "../assets/fashion.jpg";
 import img3 from "../assets/tradesman.jpg";
-import img4 from "../assets/beauty salon.jpg";
+import img4 from "../assets/beauty_salon.jpg";
 import img5 from "../assets/makeupstudio.jpg";
-import img6 from "../assets/Therapies.jpg";
+import img6 from "../assets/therapies.jpg";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 

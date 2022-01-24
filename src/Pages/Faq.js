@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import LazyLoad from "react-lazyload";
-import logo from "../assets/terms&condition.jpg";
-import MyAccordian from "../Components/MyAccordian";
+import logo from "../assets/terms_condition.jpg";
+import MyAccordian from "../Components/FaqAccordian";
 import { Navbar, Footer } from "../Components/index";
 import { MetaTags } from "react-meta-tags";
 

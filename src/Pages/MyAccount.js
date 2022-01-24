@@ -11,17 +11,23 @@ import {
   ChangePassword,
   Payment,
 } from "../Components/index";
+import { MetaTags } from "react-meta-tags";
+import { Link } from "react-router-dom";
 const MyAccount = () => {
   const [favouriteComponent, setFavouritesComponent] = useState(false);
   const [changePassword, setChangepassword] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [reviewsAndRatings, setReviewandrating] = useState(false);
   const [payment, setPayment] = useState(false);
+
   const { userData } = useUserContext();
   const userName = userData?.yu?.qf;
 
   return (
     <>
+      <MetaTags>
+        <title>My Account</title>
+      </MetaTags>
       <Navbar />
       <div className="bg-gray-100 p-5">
         <div className="flex justify-between items-center mb-10">
@@ -32,7 +38,7 @@ const MyAccount = () => {
           </div>
           <div className="text-base text-center flex flex-row justify-center items-center">
             <button className="py-2 px-4 w-1/2 font-medium  text-black rounded-lg mr-3 uppercase border-2 border-gray-900">
-              Bookings
+              <Link to="/bookings">Bookings</Link>
             </button>
             <button className="py-2 px-4 w-1/2 bg-red-600 text-white rounded-lg uppercase border-2 border-red-600">
               logout
