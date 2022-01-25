@@ -4,6 +4,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import logo from "../assets/herologo.jpg";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
         <CenterBox className=" text-white text-center leading-8">
           <MoveToRight>
             <div className="tracking-tight sm:text-2xl text-xl  mb-5">
-              Search & Book appointments with Perfect Professionals for you{" "}
+              Search & Book appointments with Perfect Professionals for you
             </div>
           </MoveToRight>
           <MoveToLeft className="flex sm:flex-row flex-col sm:bg-white lg:w-full md:w-full w-auto items-center justify-between outline-none">
@@ -54,7 +55,9 @@ const HeroSection = () => {
                 className="p-1 text-white sm:w-36 w-56 outline-none"
                 style={{ backgroundColor: "#d53078" }}
               >
+                <Link to="/search">
                 SEARCH
+                </Link>
               </button>
             </div>
           </MoveToLeft>

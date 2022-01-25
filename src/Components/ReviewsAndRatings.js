@@ -86,7 +86,6 @@ const ReviewsAndRatings = () => {
             </tr>
           </tbody>
         </table>
-
         <div className=" flex md:flex-row flex-col justify-between items-center">
           <p className="mb-3 md:mb-0">Showing 1 to 10 of 2 entires</p>
           <div>

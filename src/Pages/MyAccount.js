@@ -13,6 +13,7 @@ import {
 } from "../Components/index";
 import { MetaTags } from "react-meta-tags";
 import { Link } from "react-router-dom";
+import useUserdata from "../hooks/useUserdata";
 const MyAccount = () => {
   const [favouriteComponent, setFavouritesComponent] = useState(false);
   const [changePassword, setChangepassword] = useState(false);
@@ -20,6 +21,7 @@ const MyAccount = () => {
   const [reviewsAndRatings, setReviewandrating] = useState(false);
   const [payment, setPayment] = useState(false);
 
+  const { handleLogout } = useUserdata();
   const { userData } = useUserContext();
   const userName = userData?.yu?.qf;
 
@@ -40,7 +42,10 @@ const MyAccount = () => {
             <button className="py-2 px-4 w-1/2 font-medium  text-black rounded-lg mr-3 uppercase border-2 border-gray-900">
               <Link to="/bookings">Bookings</Link>
             </button>
-            <button className="py-2 px-4 w-1/2 bg-red-600 text-white rounded-lg uppercase border-2 border-red-600">
+            <button
+              onClick={handleLogout}
+              className="py-2 px-4 w-1/2 bg-red-600 text-white rounded-lg uppercase border-2 border-red-600"
+            >
               logout
             </button>
           </div>

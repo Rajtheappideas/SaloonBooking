@@ -13,7 +13,9 @@ import {
   Signup,
   Resetpassword,
   MyAccount,
-  Bookings
+  Bookings,
+  Search,
+  BarberShop,
 } from "./Pages/index";
 import { UserProvider } from "./context/user_context";
 const App = () => {
@@ -35,6 +37,8 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/myaccount" element={<MyAccount />} />
             <Route path="/bookings" element={<Bookings />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/barbershop" element={<BarberShop />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
           {/* <Footer /> */}

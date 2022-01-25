@@ -17,7 +17,6 @@ const Navbar = () => {
       <div
         className={`w-full h-10 bg-black text-white flex justify-end items-center p-2`}
       >
-        {" "}
         {userData ? (
           <>
             <p className="border-r pr-4 uppercase">
@@ -26,10 +25,10 @@ const Navbar = () => {
             </p>
             <button
               type="button"
-              className="text-center px-4 outline-none tracking-wider"
+              className="text-center uppercase px-4 outline-none tracking-wider"
               onClick={handleLogout}
             >
-              Logout
+              Sign out
             </button>
           </>
         ) : (
@@ -74,7 +73,7 @@ const Navbar = () => {
             type="button"
             className="p-2 w-32 font-thin bg-black text-white outline-none"
           >
-            SEARCH
+            <Link to="/search">SEARCH</Link>
           </button>
         </div>
         <div className="mb-3 lg:mb-0">
