@@ -2,16 +2,7 @@ import React, { useState } from "react";
 import { MetaTags } from "react-meta-tags";
 import { Footer, Navbar } from "../Components";
 import barberShop from "../assets/barber_shop.jpg";
-import barberimg1 from "../assets/barberstylist1.jpg";
-import barberimg2 from "../assets/barberstylist2.jpg";
-import barberimg3 from "../assets/barberstylist3.jpg";
-import {
-  MdEmail,
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowRight,
-  MdOutlineKeyboardArrowUp,
-  MdVerifiedUser,
-} from "react-icons/md";
+import { MdEmail, MdVerifiedUser } from "react-icons/md";
 import {
   FaFacebook,
   FaHeart,
@@ -19,50 +10,15 @@ import {
   FaMobileAlt,
   FaPaypal,
   FaRegCreditCard,
-  FaSearch,
   FaShareSquare,
 } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 import Map from "../assets/map.png";
-import { BsCashStack, BsFilterLeft, BsThreeDots } from "react-icons/bs";
+import { BsCashStack, BsThreeDots } from "react-icons/bs";
 import AboutusBarbershop from "../Components/AboutusBarbershop";
-import { AiOutlineLeft, AiOutlineRight, AiTwotoneStar } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
-const popularOffer = [
-  //
-  [
-    {
-      name: "Skin fade",
-      prize: "10.00",
-    },
-    {
-      name: "Shape up",
-      prize: "4.00",
-    },
-    {
-      name: "Hair cut & beard shave",
-      prize: "10.00",
-    },
-    {
-      name: "Beard & moustache",
-      prize: "10.00",
-    },
-    {
-      name: "Haircut",
-      prize: "10.00",
-    },
-  ],
-];
-const offers = [
-  { name: "popular" },
-  { name: "Mens Waxing - Face & Body " },
-  { name: "Womans Waxing - Face & Body " },
-  { name: "Advance Body Treatment" },
-];
 const BarberShop = () => {
   const [favourtie, setFavourite] = useState(false);
-  const [openOffer, setOpenoffer] = useState(false);
 
   return (
     <>

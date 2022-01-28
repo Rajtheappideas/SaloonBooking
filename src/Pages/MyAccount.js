@@ -58,8 +58,11 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black active:bg-pink-200 hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    // setFavouritesComponent((prev) => !prev);
                     setFavouritesComponent(true);
+                    setChangepassword(false);
+                    setEditProfile(false);
+                    setPayment(false);
+                    setReviewandrating(false);
                   }}
                 >
                   <MdOutlineFavoriteBorder
@@ -73,8 +76,11 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    // setEditProfile((prev) => !prev);
+                    setFavouritesComponent(false);
+                    setChangepassword(false);
                     setEditProfile(true);
+                    setPayment(false);
+                    setReviewandrating(false);
                   }}
                 >
                   <FaUserEdit className="inline-block mr-2" size={20} />
@@ -85,7 +91,10 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    // setReviewandrating((prev) => !prev);
+                    setFavouritesComponent(false);
+                    setChangepassword(false);
+                    setEditProfile(false);
+                    setPayment(false);
                     setReviewandrating(true);
                   }}
                 >
@@ -98,8 +107,11 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    // setPayment((prev) => !prev);
+                    setFavouritesComponent(false);
+                    setChangepassword(false);
+                    setEditProfile(false);
                     setPayment(true);
+                    setReviewandrating(false);
                   }}
                 >
                   {" "}
@@ -111,8 +123,11 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    // setChangepassword((prev) => !prev);
+                    setFavouritesComponent(false);
                     setChangepassword(true);
+                    setEditProfile(false);
+                    setPayment(false);
+                    setReviewandrating(false);
                   }}
                 >
                   {" "}
@@ -122,11 +137,11 @@ const MyAccount = () => {
               </li>
             </ul>
           </div>
-          {favouriteComponent ? <Favourites /> : null}
-          {editProfile ? <EditProfile /> : null}
-          {reviewsAndRatings ? <ReviewsAndRatings /> : null}
-          {payment ? <Payment /> : null}
-          {changePassword ? <ChangePassword /> : null}
+          {favouriteComponent && <Favourites />}
+          {editProfile && <EditProfile />}
+          {reviewsAndRatings && <ReviewsAndRatings />}
+          {payment && <Payment />}
+          {changePassword && <ChangePassword />}
         </div>
       </div>
       <Footer />
