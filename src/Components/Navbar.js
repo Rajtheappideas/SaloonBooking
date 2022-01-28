@@ -10,14 +10,14 @@ import { useUserContext } from "../context/user_context";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { handleLogout } = useUserdata();
-  const { userData } = useUserContext();
-  const userName = userData?.yu?.qf;
+  const { userName } = useUserContext();
+  // const userName = userData?.yu?.qf;
   return (
     <nav className="text-thin">
       <div
         className={`w-full h-10 bg-black text-white flex justify-end items-center p-2`}
       >
-        {userData ? (
+        {userName ? (
           <>
             <p className="border-r pr-4 uppercase">
               Hi,

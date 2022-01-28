@@ -15,15 +15,14 @@ import { MetaTags } from "react-meta-tags";
 import { Link } from "react-router-dom";
 import useUserdata from "../hooks/useUserdata";
 const MyAccount = () => {
-  const [favouriteComponent, setFavouritesComponent] = useState(false);
+  const [favouriteComponent, setFavouritesComponent] = useState(true);
   const [changePassword, setChangepassword] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [reviewsAndRatings, setReviewandrating] = useState(false);
   const [payment, setPayment] = useState(false);
 
   const { handleLogout } = useUserdata();
-  const { userData } = useUserContext();
-  const userName = userData?.yu?.qf;
+  const { userName } = useUserContext();
 
   return (
     <>
@@ -58,7 +57,6 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black active:bg-pink-200 hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setFavouritesComponent(true);
                     setChangepassword(false);
                     setEditProfile(false);
                     setPayment(false);

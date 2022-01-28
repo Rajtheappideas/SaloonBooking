@@ -2,9 +2,10 @@ import React from "react";
 import { MetaTags } from "react-meta-tags";
 import { Footer, Navbar } from "../Components";
 import barbershop from "../assets/barber_shop.jpg";
-import { AiTwotoneStar } from "react-icons/ai";
+import { BsStarFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const Review = () => {
+  // const
   return (
     <>
       <MetaTags>
@@ -35,11 +36,11 @@ const Review = () => {
             How Would you rate this business?
           </p>
           <div className="flex mb-5">
-            <AiTwotoneStar size={50} color="gold" className="cursor-pointer" />
-            <AiTwotoneStar size={50} color="gold" className="cursor-pointer" />
-            <AiTwotoneStar size={50} color="gold" className="cursor-pointer" />
-            <AiTwotoneStar size={50} color="gold" className="cursor-pointer" />
-            <AiTwotoneStar size={50} color="gold" className="cursor-pointer" />
+            <BsStarFill size={50} color="gold" className="cursor-pointer" />
+            <BsStarFill size={50} color="gold" className="cursor-pointer" />
+            <BsStarFill size={50} color="gold" className="cursor-pointer" />
+            <BsStarFill size={50} color="gold" className="cursor-pointer" />
+            <BsStarFill size={50} color="gold" className="cursor-pointer" />
           </div>
           <span className="text-base">Your review</span>
           <textarea

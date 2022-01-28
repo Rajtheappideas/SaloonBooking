@@ -7,9 +7,10 @@ export const UserProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem("logindata"))
       : null
   );
+  const userName  = userData?.Ju?.tf;
 
   return (
-    <UserContext.Provider value={{ userData, setUserdata }}>
+    <UserContext.Provider value={{ userData, setUserdata,userName }}>
       {children}
     </UserContext.Provider>
   );
