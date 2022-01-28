@@ -14,28 +14,27 @@ import { Link } from "react-router-dom";
 
 const popularOffer = [
   //
-  [
-    {
-      name: "Skin fade",
-      prize: "10.00",
-    },
-    {
-      name: "Shape up",
-      prize: "4.00",
-    },
-    {
-      name: "Hair cut & beard shave",
-      prize: "10.00",
-    },
-    {
-      name: "Beard & moustache",
-      prize: "10.00",
-    },
-    {
-      name: "Haircut",
-      prize: "10.00",
-    },
-  ],
+
+  {
+    name: "Skin fade",
+    prize: "10.00",
+  },
+  {
+    name: "Shape up",
+    prize: "4.00",
+  },
+  {
+    name: "Hair cut & beard shave",
+    prize: "10.00",
+  },
+  {
+    name: "Beard & moustache",
+    prize: "10.00",
+  },
+  {
+    name: "Haircut",
+    prize: "10.00",
+  },
 ];
 const offers = [
   { name: "popular" },
@@ -111,7 +110,10 @@ const AboutusBarbershop = () => {
         </div>
 
         {/* ----------------------------------what we offer----------------------------------- */}
-        <div className="justify-between flex items-center my-3 pb-3 border-b border-gray-300 " id="whatweoffer">
+        <div
+          className="justify-between flex items-center my-3 pb-3 border-b border-gray-300 "
+          id="whatweoffer"
+        >
           <p className="text-pink-500 font-semibold text-xl">What We offer</p>
           <div className="relative ">
             <input
@@ -126,27 +128,24 @@ const AboutusBarbershop = () => {
             />
           </div>
         </div>
-        {offers.map((item) => {
-          return (
-            <div className="flex justify-between items-center py-2 border-b border-gray-300">
-              <span className="font-bold text-lg">{item.name}</span>
-              {openOffer ? (
-                <MdOutlineKeyboardArrowUp
-                  onClick={() => setOpenoffer((prev) => !prev)}
-                  size={35}
-                  className="cursor-pointer"
-                />
-              ) : (
-                <MdOutlineKeyboardArrowDown
-                  onClick={() => setOpenoffer((prev) => !prev)}
-                  size={35}
-                  className="cursor-pointer"
-                />
-              )}
-            </div>
-          );
-        })}
-        {openOffer ? (
+
+        <div className="flex justify-between items-center py-2 border-b border-gray-300">
+          <span className="font-bold text-lg">Popular</span>
+          {openOffer ? (
+            <MdOutlineKeyboardArrowUp
+              onClick={() => setOpenoffer((prev) => !prev)}
+              size={35}
+              className="cursor-pointer"
+            />
+          ) : (
+            <MdOutlineKeyboardArrowDown
+              onClick={() => setOpenoffer((prev) => !prev)}
+              size={35}
+              className="cursor-pointer"
+            />
+          )}
+        </div>
+        {openOffer && (
           <>
             {popularOffer.map((item) => (
               <div className="flex justify-between items-center my-2">
@@ -160,7 +159,22 @@ const AboutusBarbershop = () => {
               </div>
             ))}
           </>
-        ) : null}
+        )}
+        <div className="flex justify-between items-center py-2 border-b border-gray-300">
+          <span className="font-bold text-lg">Mens Waxing - Face & Body</span>
+          {/* <MdOutlineKeyboardArrowUp size={35} className="cursor-pointer" /> */}
+          <MdOutlineKeyboardArrowDown size={35} className="cursor-pointer" />
+        </div>
+        <div className="flex justify-between items-center py-2 border-b border-gray-300">
+          <span className="font-bold text-lg">Womans Waxing - Face & Body</span>
+          {/* <MdOutlineKeyboardArrowUp size={35} className="cursor-pointer" /> */}
+          <MdOutlineKeyboardArrowDown size={35} className="cursor-pointer" />
+        </div>
+        <div className="flex justify-between items-center py-2 border-b border-gray-300">
+          <span className="font-bold text-lg">Advance Body Treatment</span>
+          {/* <MdOutlineKeyboardArrowUp size={35} className="cursor-pointer" /> */}
+          <MdOutlineKeyboardArrowDown size={35} className="cursor-pointer" />
+        </div>
 
         {/* --------------------------------recent work------------------------------------ */}
         <div className="my-3" id="recentwork">
