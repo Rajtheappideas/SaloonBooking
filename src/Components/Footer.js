@@ -105,9 +105,9 @@ const Footer = () => {
                 </Link>{" "}
               </li>
               <li className="text-base mb-2">
-                <Link to="/" className="hover:underline" onClick={scrollToTop}>
+                <a href="/#howitworks" className="hover:underline">
                   How It Works
-                </Link>{" "}
+                </a>
               </li>
             </ul>
           </div>

@@ -33,7 +33,7 @@ const data = [
 ];
 const HeroSection3 = () => {
   return (
-    <div className="p-20">
+    <div className="p-20" id="howitworks">
       <div className="text-center mb-8 ">
         <div className="font-semibold tracking-wider relative inline-block uppercase text-2xl">
           how it works

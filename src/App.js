@@ -16,6 +16,7 @@ import {
   Bookings,
   Search,
   BarberShop,
+  Review,
 } from "./Pages/index";
 import { UserProvider } from "./context/user_context";
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/bookings" element={<Bookings />} />
             <Route path="/search" element={<Search />} />
             <Route path="/barbershop" element={<BarberShop />} />
+            <Route path="/review" element={<Review />} />
             <Route path="*" element={<Error404 />} />
           </Routes>
           {/* <Footer /> */}

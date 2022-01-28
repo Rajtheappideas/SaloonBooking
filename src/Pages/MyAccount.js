@@ -58,7 +58,8 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black active:bg-pink-200 hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setFavouritesComponent((prev) => !prev);
+                    // setFavouritesComponent((prev) => !prev);
+                    setFavouritesComponent(true);
                   }}
                 >
                   <MdOutlineFavoriteBorder
@@ -72,7 +73,8 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setEditProfile((prev) => !prev);
+                    // setEditProfile((prev) => !prev);
+                    setEditProfile(true);
                   }}
                 >
                   <FaUserEdit className="inline-block mr-2" size={20} />
@@ -83,7 +85,8 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setReviewandrating((prev) => !prev);
+                    // setReviewandrating((prev) => !prev);
+                    setReviewandrating(true);
                   }}
                 >
                   {" "}
@@ -95,7 +98,8 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setPayment((prev) => !prev);
+                    // setPayment((prev) => !prev);
+                    setPayment(true);
                   }}
                 >
                   {" "}
@@ -107,7 +111,8 @@ const MyAccount = () => {
                 <button
                   className="inline-flex items-center md:w-48 px-3 py-2 font-medium rounded leading-5 text-primary-100 text-black hover:bg-pink-200 hover:text-pink-600"
                   onClick={() => {
-                    setChangepassword((prev) => !prev);
+                    // setChangepassword((prev) => !prev);
+                    setChangepassword(true);
                   }}
                 >
                   {" "}

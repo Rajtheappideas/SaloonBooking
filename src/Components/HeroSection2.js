@@ -4,7 +4,7 @@ import img2 from "../assets/fashion.jpg";
 import img3 from "../assets/tradesman.jpg";
 import img4 from "../assets/beauty_salon.jpg";
 import img5 from "../assets/makeupstudio.jpg";
-import img6 from "../assets/therapies.jpg";
+import img6 from "../assets/Therapist.jpg";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 
@@ -58,7 +58,7 @@ const HeroSection2 = () => {
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-auto object-cover object-center h-auto"
+                    className="w-full object-cover object-center h-60"
                   />
                 </LazyLoad>
               </div>

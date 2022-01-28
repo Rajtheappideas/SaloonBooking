@@ -11,4 +11,5 @@ export { default as MyAccount } from "./MyAccount";
 export { default as Bookings } from "./Bookings";
 export { default as Search } from "./Search";
 export { default as BarberShop } from "./BarberShop";
+export { default as Review } from "./Review";
 export { default as Error404 } from "./Error404";
